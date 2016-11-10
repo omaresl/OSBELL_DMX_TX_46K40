@@ -1,0 +1,329 @@
+Version 3.2 HI-TECH Software Intermediate Code
+[; ;stdtypedef.h: 39: typedef unsigned char T_UBYTE;
+[; ;stdtypedef.h: 40: typedef unsigned short T_UWORD;
+[; ;stdtypedef.h: 41: typedef unsigned long T_ULONG;
+[; ;stdtypedef.h: 42: typedef signed char T_SBYTE;
+[; ;stdtypedef.h: 43: typedef signed short T_SWORD;
+[; ;stdtypedef.h: 44: typedef signed long T_SLONG;
+[; ;stdtypedef.h: 45: typedef unsigned int T_FLAG_ARRAY;
+[; ;stdtypedef.h: 48: typedef void(*T_PPROC)(void);
+[; ;stdtypedef.h: 51: typedef T_UBYTE * PTR_UBYTE;
+[; ;stdtypedef.h: 52: typedef T_UWORD * PTR_UWORD;
+[; ;stdtypedef.h: 53: typedef T_ULONG * PTR_ULONG;
+[; ;stdtypedef.h: 54: typedef T_SBYTE * PTR_SBYTE;
+[; ;stdtypedef.h: 55: typedef T_SWORD * PTR_SWORD;
+[; ;stdtypedef.h: 56: typedef T_SLONG * PTR_SLONG;
+[; ;stdtypedef.h: 58: typedef T_UBYTE T_BOOLEAN;
+[; ;stdtypedef.h: 73: typedef struct {
+[; ;stdtypedef.h: 74: unsigned int bit0:1;
+[; ;stdtypedef.h: 75: unsigned int bit1:1;
+[; ;stdtypedef.h: 76: unsigned int bit2:1;
+[; ;stdtypedef.h: 77: unsigned int bit3:1;
+[; ;stdtypedef.h: 78: unsigned int bit4:1;
+[; ;stdtypedef.h: 79: unsigned int bit5:1;
+[; ;stdtypedef.h: 80: unsigned int bit6:1;
+[; ;stdtypedef.h: 81: unsigned int bit7:1;
+[; ;stdtypedef.h: 82: }T_BITFLD8;
+[; ;stdtypedef.h: 84: typedef struct {
+[; ;stdtypedef.h: 85: unsigned int bit15:1;
+[; ;stdtypedef.h: 86: unsigned int bit14:1;
+[; ;stdtypedef.h: 87: unsigned int bit13:1;
+[; ;stdtypedef.h: 88: unsigned int bit12:1;
+[; ;stdtypedef.h: 89: unsigned int bit11:1;
+[; ;stdtypedef.h: 90: unsigned int bit10:1;
+[; ;stdtypedef.h: 91: unsigned int bit9:1;
+[; ;stdtypedef.h: 92: unsigned int bit8:1;
+[; ;stdtypedef.h: 93: unsigned int bit7:1;
+[; ;stdtypedef.h: 94: unsigned int bit6:1;
+[; ;stdtypedef.h: 95: unsigned int bit5:1;
+[; ;stdtypedef.h: 96: unsigned int bit4:1;
+[; ;stdtypedef.h: 97: unsigned int bit3:1;
+[; ;stdtypedef.h: 98: unsigned int bit2:1;
+[; ;stdtypedef.h: 99: unsigned int bit1:1;
+[; ;stdtypedef.h: 100: unsigned int bit0:1;
+[; ;stdtypedef.h: 101: }T_BITFLD16;
+[; ;stdtypedef.h: 104: typedef struct {
+[; ;stdtypedef.h: 105: unsigned int bit31:1;
+[; ;stdtypedef.h: 106: unsigned int bit30:1;
+[; ;stdtypedef.h: 107: unsigned int bit29:1;
+[; ;stdtypedef.h: 108: unsigned int bit28:1;
+[; ;stdtypedef.h: 109: unsigned int bit27:1;
+[; ;stdtypedef.h: 110: unsigned int bit26:1;
+[; ;stdtypedef.h: 111: unsigned int bit25:1;
+[; ;stdtypedef.h: 112: unsigned int bit24:1;
+[; ;stdtypedef.h: 113: unsigned int bit23:1;
+[; ;stdtypedef.h: 114: unsigned int bit22:1;
+[; ;stdtypedef.h: 115: unsigned int bit21:1;
+[; ;stdtypedef.h: 116: unsigned int bit20:1;
+[; ;stdtypedef.h: 117: unsigned int bit19:1;
+[; ;stdtypedef.h: 118: unsigned int bit18:1;
+[; ;stdtypedef.h: 119: unsigned int bit17:1;
+[; ;stdtypedef.h: 120: unsigned int bit16:1;
+[; ;stdtypedef.h: 121: unsigned int bit15:1;
+[; ;stdtypedef.h: 122: unsigned int bit14:1;
+[; ;stdtypedef.h: 123: unsigned int bit13:1;
+[; ;stdtypedef.h: 124: unsigned int bit12:1;
+[; ;stdtypedef.h: 125: unsigned int bit11:1;
+[; ;stdtypedef.h: 126: unsigned int bit10:1;
+[; ;stdtypedef.h: 127: unsigned int bit9:1;
+[; ;stdtypedef.h: 128: unsigned int bit8:1;
+[; ;stdtypedef.h: 129: unsigned int bit7:1;
+[; ;stdtypedef.h: 130: unsigned int bit6:1;
+[; ;stdtypedef.h: 131: unsigned int bit5:1;
+[; ;stdtypedef.h: 132: unsigned int bit4:1;
+[; ;stdtypedef.h: 133: unsigned int bit3:1;
+[; ;stdtypedef.h: 134: unsigned int bit2:1;
+[; ;stdtypedef.h: 135: unsigned int bit1:1;
+[; ;stdtypedef.h: 136: unsigned int bit0:1;
+[; ;stdtypedef.h: 137: }T_BITFLD32;
+[; ;stdtypedef.h: 140: typedef union{
+[; ;stdtypedef.h: 141: T_UWORD wo;
+[; ;stdtypedef.h: 142: struct{
+[; ;stdtypedef.h: 143: T_UBYTE msb;
+[; ;stdtypedef.h: 144: T_UBYTE lsb;
+[; ;stdtypedef.h: 145: }by;
+[; ;stdtypedef.h: 146: }T_BYTEFLD;
+[; ;stdtypedef.h: 149: typedef union{
+[; ;stdtypedef.h: 150: T_ULONG lo;
+[; ;stdtypedef.h: 151: struct {
+[; ;stdtypedef.h: 152: T_UBYTE highword_msb;
+[; ;stdtypedef.h: 153: T_UBYTE highword_lsb;
+[; ;stdtypedef.h: 154: T_UBYTE lowword_msb;
+[; ;stdtypedef.h: 155: T_UBYTE lowword_lsb;
+[; ;stdtypedef.h: 156: } by;
+[; ;stdtypedef.h: 158: struct {
+[; ;stdtypedef.h: 159: T_UWORD highword;
+[; ;stdtypedef.h: 160: T_UWORD lowword;
+[; ;stdtypedef.h: 161: } wo;
+[; ;stdtypedef.h: 163: }T_BYTEFLD32;
+[; ;stdtypedef.h: 166: typedef union {
+[; ;stdtypedef.h: 167: T_UBYTE by;
+[; ;stdtypedef.h: 168: T_BITFLD8 bi;
+[; ;stdtypedef.h: 169: }T_FLAG8;
+[; ;stdtypedef.h: 172: typedef union {
+[; ;stdtypedef.h: 173: T_BYTEFLD cr;
+[; ;stdtypedef.h: 174: T_BITFLD16 bi;
+[; ;stdtypedef.h: 175: }T_FLAG16;
+[; ;stdtypedef.h: 178: typedef union {
+[; ;stdtypedef.h: 179: T_BYTEFLD32 cr;
+[; ;stdtypedef.h: 180: T_BITFLD32 bi;
+[; ;stdtypedef.h: 181: }T_FLAG32;
+[; ;stdtypedef.h: 184: typedef enum
+[; ;stdtypedef.h: 185: {
+[; ;stdtypedef.h: 186: BFALSE = 0u,
+[; ;stdtypedef.h: 187: BTRUE
+[; ;stdtypedef.h: 188: }E_BOOLEAN;
+[; ;app_convert.h: 11: extern void bin2bcd(T_UWORD luw_Bin_Data);
+[; ;app_convert.h: 12: extern void bcd2ascii(void);
+[; ;app_convert.h: 13: extern T_UBYTE bcd27seg(T_UWORD luw_BCDData);
+[; ;app_convert.h: 15: extern T_UWORD rub_BCDUni,
+[; ;app_convert.h: 16: rub_BCDDec,
+[; ;app_convert.h: 17: rub_BCDCen,
+[; ;app_convert.h: 18: rub_BCDUmil,
+[; ;app_convert.h: 19: rub_BCDDmil,
+[; ;app_convert.h: 20: rub_BCDCmil;
+"12 app/app_convert.c
+[v _rub_BCDUni `us ~T0 @X0 1 e ]
+[i _rub_BCDUni
+-> -> 0 `i `us
+]
+"13
+[v _rub_BCDDec `us ~T0 @X0 1 e ]
+[i _rub_BCDDec
+-> -> 0 `i `us
+]
+"14
+[v _rub_BCDCen `us ~T0 @X0 1 e ]
+[i _rub_BCDCen
+-> -> 0 `i `us
+]
+"15
+[v _rub_BCDUmil `us ~T0 @X0 1 e ]
+[i _rub_BCDUmil
+-> -> 0 `i `us
+]
+"16
+[v _rub_BCDDmil `us ~T0 @X0 1 e ]
+[i _rub_BCDDmil
+-> -> 0 `i `us
+]
+"17
+[v _rub_BCDCmil `us ~T0 @X0 1 e ]
+[i _rub_BCDCmil
+-> -> 0 `i `us
+]
+[; ;app_convert.c: 12: T_UWORD rub_BCDUni = 0,
+[; ;app_convert.c: 13: rub_BCDDec = 0,
+[; ;app_convert.c: 14: rub_BCDCen = 0,
+[; ;app_convert.c: 15: rub_BCDUmil = 0,
+[; ;app_convert.c: 16: rub_BCDDmil = 0,
+[; ;app_convert.c: 17: rub_BCDCmil = 0;
+"18
+[v _rub_7segSymbols `Cuc ~T0 @X0 -> 16 `i e ]
+[i _rub_7segSymbols
+:U ..
+-> -> 192 `i `uc
+"19
+-> -> 249 `i `uc
+"20
+-> -> 164 `i `uc
+"21
+-> -> 176 `i `uc
+"22
+-> -> 153 `i `uc
+"23
+-> -> 146 `i `uc
+"24
+-> -> 130 `i `uc
+"25
+-> -> 248 `i `uc
+"26
+-> -> 128 `i `uc
+"27
+-> -> 152 `i `uc
+"28
+-> -> 136 `i `uc
+"29
+-> -> 131 `i `uc
+"30
+-> -> 198 `i `uc
+"31
+-> -> 161 `i `uc
+"32
+-> -> 134 `i `uc
+"33
+-> -> 142 `i `uc
+..
+]
+[; ;app_convert.c: 18: const T_UBYTE rub_7segSymbols[16] = { 0b11000000,
+[; ;app_convert.c: 19: 0b11111001,
+[; ;app_convert.c: 20: 0b10100100,
+[; ;app_convert.c: 21: 0b10110000,
+[; ;app_convert.c: 22: 0b10011001,
+[; ;app_convert.c: 23: 0b10010010,
+[; ;app_convert.c: 24: 0b10000010,
+[; ;app_convert.c: 25: 0b11111000,
+[; ;app_convert.c: 26: 0b10000000,
+[; ;app_convert.c: 27: 0b10011000,
+[; ;app_convert.c: 28: 0b10001000,
+[; ;app_convert.c: 29: 0b10000011,
+[; ;app_convert.c: 30: 0b11000110,
+[; ;app_convert.c: 31: 0b10100001,
+[; ;app_convert.c: 32: 0b10000110,
+[; ;app_convert.c: 33: 0b10001110,
+[; ;app_convert.c: 34: };
+"35
+[v _bin2bcd `(v ~T0 @X0 1 ef1`us ]
+{
+[; ;app_convert.c: 35: void bin2bcd(T_UWORD luw_Bin_Data){
+[e :U _bin2bcd ]
+[v _luw_Bin_Data `us ~T0 @X0 1 r1 ]
+[f ]
+"36
+[v _luw_aux `us ~T0 @X0 1 a ]
+[; ;app_convert.c: 36: T_UWORD luw_aux;
+[; ;app_convert.c: 37: luw_aux = luw_Bin_Data;
+"37
+[e = _luw_aux _luw_Bin_Data ]
+[; ;app_convert.c: 38: rub_BCDCmil = (luw_aux / 100000);
+"38
+[e = _rub_BCDCmil -> / -> _luw_aux `l -> 100000 `l `us ]
+[; ;app_convert.c: 39: luw_aux = (luw_aux - (rub_BCDCmil*100000));
+"39
+[e = _luw_aux -> - -> _luw_aux `l * -> _rub_BCDCmil `l -> 100000 `l `us ]
+[; ;app_convert.c: 40: rub_BCDDmil = (luw_aux / 10000);
+"40
+[e = _rub_BCDDmil -> / -> _luw_aux `ui -> -> 10000 `i `ui `us ]
+[; ;app_convert.c: 41: luw_aux = (luw_aux - (rub_BCDDmil*10000));
+"41
+[e = _luw_aux -> - -> _luw_aux `ui * -> _rub_BCDDmil `ui -> -> 10000 `i `ui `us ]
+[; ;app_convert.c: 42: rub_BCDUmil = (luw_aux / 1000);
+"42
+[e = _rub_BCDUmil -> / -> _luw_aux `ui -> -> 1000 `i `ui `us ]
+[; ;app_convert.c: 43: luw_aux = (luw_aux - (rub_BCDUmil*1000));
+"43
+[e = _luw_aux -> - -> _luw_aux `ui * -> _rub_BCDUmil `ui -> -> 1000 `i `ui `us ]
+[; ;app_convert.c: 44: rub_BCDCen = (luw_aux / 100);
+"44
+[e = _rub_BCDCen -> / -> _luw_aux `ui -> -> 100 `i `ui `us ]
+[; ;app_convert.c: 45: luw_aux = (luw_aux - (rub_BCDCen*100));
+"45
+[e = _luw_aux -> - -> _luw_aux `ui * -> _rub_BCDCen `ui -> -> 100 `i `ui `us ]
+[; ;app_convert.c: 46: rub_BCDDec = (luw_aux / 10);
+"46
+[e = _rub_BCDDec -> / -> _luw_aux `ui -> -> 10 `i `ui `us ]
+[; ;app_convert.c: 47: luw_aux = (luw_aux - (rub_BCDDec*10));
+"47
+[e = _luw_aux -> - -> _luw_aux `ui * -> _rub_BCDDec `ui -> -> 10 `i `ui `us ]
+[; ;app_convert.c: 48: rub_BCDUni = (luw_aux);
+"48
+[e = _rub_BCDUni _luw_aux ]
+[; ;app_convert.c: 49: }
+"49
+[e :UE 12 ]
+}
+"51
+[v _bcd2ascii `(v ~T0 @X0 1 ef ]
+"52
+{
+[; ;app_convert.c: 51: void bcd2ascii(void)
+[; ;app_convert.c: 52: {
+[e :U _bcd2ascii ]
+[f ]
+[; ;app_convert.c: 53: rub_BCDUni += 0x30;
+"53
+[e =+ _rub_BCDUni -> -> 48 `i `us ]
+[; ;app_convert.c: 54: rub_BCDDec += 0x30;
+"54
+[e =+ _rub_BCDDec -> -> 48 `i `us ]
+[; ;app_convert.c: 55: rub_BCDCen += 0x30;
+"55
+[e =+ _rub_BCDCen -> -> 48 `i `us ]
+[; ;app_convert.c: 56: rub_BCDUmil += 0x30;
+"56
+[e =+ _rub_BCDUmil -> -> 48 `i `us ]
+[; ;app_convert.c: 57: rub_BCDDmil += 0x30;
+"57
+[e =+ _rub_BCDDmil -> -> 48 `i `us ]
+[; ;app_convert.c: 58: rub_BCDCmil += 0x30;
+"58
+[e =+ _rub_BCDCmil -> -> 48 `i `us ]
+[; ;app_convert.c: 59: }
+"59
+[e :UE 13 ]
+}
+"61
+[v _bcd27seg `(uc ~T0 @X0 1 ef1`us ]
+{
+[; ;app_convert.c: 61: T_UBYTE bcd27seg(T_UWORD luw_BCDData){
+[e :U _bcd27seg ]
+[v _luw_BCDData `us ~T0 @X0 1 r1 ]
+[f ]
+[; ;app_convert.c: 62: if(luw_BCDData <= 0x000f){
+"62
+[e $ ! <= -> _luw_BCDData `ui -> -> 15 `i `ui 15  ]
+{
+[; ;app_convert.c: 63: return(rub_7segSymbols[luw_BCDData]);
+"63
+[e ) *U + &U _rub_7segSymbols * -> _luw_BCDData `ux -> -> # *U &U _rub_7segSymbols `ui `ux ]
+[e $UE 14  ]
+"64
+}
+[; ;app_convert.c: 64: }
+[e $U 16  ]
+"65
+[e :U 15 ]
+[; ;app_convert.c: 65: else{
+{
+[; ;app_convert.c: 66: return(luw_BCDData >> 4);
+"66
+[e ) -> >> -> _luw_BCDData `ui -> 4 `i `uc ]
+[e $UE 14  ]
+"67
+}
+[e :U 16 ]
+[; ;app_convert.c: 67: }
+[; ;app_convert.c: 68: }
+"68
+[e :UE 14 ]
+}
