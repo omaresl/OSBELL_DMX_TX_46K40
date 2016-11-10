@@ -31,3 +31,6 @@
 # Debug files
 *.dSYM/
 *.su
+DMX_BASCI_TX_46K40.X/nbproject/
+DMX_BASCI_TX_46K40.X/build/
+DMX_BASCI_TX_46K40.X/dist/
