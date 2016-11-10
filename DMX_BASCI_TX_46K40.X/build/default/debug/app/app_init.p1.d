@@ -1,7 +1,0 @@
- build/default/debug/app/app_init.d  \
- build/default/debug/app/app_init.p1:  \
- app/app_init.c  \
-Headers/system.h  \
-Headers/stdtypedef.h  \
-app/app_init.h  \
-app/app_HD44780.h 
