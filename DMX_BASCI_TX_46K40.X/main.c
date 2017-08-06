@@ -84,7 +84,7 @@ void main(void)
     //INTERRUPT_PeripheralInterruptDisable();
     while (1)
     {
-        InitApp();
+        InitApp();/*Init application*/
         
         INTERRUPT_GlobalInterruptHighEnable();
         INTERRUPT_GlobalInterruptLowEnable();      
